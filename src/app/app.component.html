@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<!-- {{message$ | async}}
+<button (click) = 'spanisMessage()'>Spanish</button>
+<button (click) = 'frenchMessage()'>French</button> -->
+
+<div *ngIf = "post$ | async as p">
+<h2>{{p.text}}</h2>
+<h2>Votes: {{p.likes}}</h2>
+<input [(ngModel)] = 'text' />
+<button (click) = 'editText()'>EditText</button>
+<button (click) = 'resetPost()'>Reset</button>
+<button (click) = 'upvote()'>Upvote</button>
+<button (click) = 'downvote()'>Downvote</button>
+
+</div>
